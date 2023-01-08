@@ -9,16 +9,28 @@ import WebsiteBuilder from './Components/Website-Card-Section/WebsiteBuilder';
 
 
 
+
+
+
+
+
+
+
+
+import ReviewPages from './Components/Reviews/ReviewPages';
+import ReviewPostPage from './Components/Reviews/ReviewPostPage';
+
 function App() {
   return (
     <>
       <Router>
           <NavBar/>
-          {/* <Hero/> */}
-          <WebsiteBuilder/> 
+
         <Routes>
           <Route  path='/Blog' element={<BlogPage/>} />
           <Route  path='/Blog/:slug' element={<BlogPostPage/>} />
+          <Route path='/Review' element={<ReviewPages />} />
+          <Route path='/Review/:slug' element={<ReviewPostPage />} />
         </Routes>
         <Footer/>
       </Router>

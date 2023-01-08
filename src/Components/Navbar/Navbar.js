@@ -81,7 +81,7 @@ const NavBar = () => {
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="/Services/UiUxDesigns">
+                      <a class="dropdown-item" href="/Review">
                         Review
                       </a>
                     </li>
