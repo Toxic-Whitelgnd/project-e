@@ -4,7 +4,7 @@ import urlBuilder from "@sanity/image-url";
 import { format } from "date-fns";
 import BlockContent from "@sanity/block-content-to-react";
 import { Client } from "../../lib/client";
-import "./BlogPage.css";
+import "./ReviewPostPage.css";
 
 
 const urlFor = (source) =>
@@ -12,7 +12,7 @@ const urlFor = (source) =>
 
 const serializer = {
   types: {
-  image: (props) => (
+    image: (props) => (
       <figure>
         <img
           src={urlFor(props.node.asset).width(1000).url()}
@@ -25,9 +25,7 @@ const serializer = {
   },
 };
 
-
-
-const BlogPostPage = () => {
+const ReviewPostPage = () => {
     const [blogpost,setBlogpost] = useState([])
     const { slug } = useParams();
     const scrollUp = () => {
@@ -86,7 +84,6 @@ const BlogPostPage = () => {
               <BlockContent
                 blocks={blogpost.body}
                 projectId="okbuvnoj"
-                // imageOptions={{w: 400, h: 440, fit: 'max'}}
                 dataset="production"
                 serializers={serializer}
                 className="BlockContent "
@@ -97,7 +94,7 @@ const BlogPostPage = () => {
                   to="/blog"
                   className="Banner_Read_More"
                 >
-                  Read More Blog posts
+                  Read More Review posts
                 </Link>
               </div>
             </section>
@@ -107,4 +104,4 @@ const BlogPostPage = () => {
     );
 }
 
-export default BlogPostPage;
+export default ReviewPostPage;
