@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hero from './Components/Hero/Hero';
 import NavBar from './Components/Navbar/Navbar';
-import  BlogPage from './Components/Blog/BlogPage';
 
 function App() {
   return (
@@ -10,9 +9,11 @@ function App() {
       <Router>
           <NavBar/>
           <Hero/>
+          <WebsiteBuilder/>
         <Routes>
-          <Route path='/Blog' element={<BlogPage/>} />
+          <Route />
         </Routes>
+        <Footer/>
       </Router>
     </>
   );

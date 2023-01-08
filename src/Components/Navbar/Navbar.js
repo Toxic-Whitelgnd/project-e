@@ -66,7 +66,7 @@ const NavBar = () => {
                       setHamShow(!HamShow);
                     }}
                   >
-                    About
+                    Top Ecommece 
                   </a>
                 </li>
                 <li class="nav-item dropdown">
@@ -77,17 +77,17 @@ const NavBar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Services
+                    Blog
                   </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="/Services/UiUxDesigns">
-                        UI/UX Designs
+                        Review
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="/Services/AppDev">
-                        Web & Mobile apps
+                        Resourse
                       </a>
                     </li>
                     <li>

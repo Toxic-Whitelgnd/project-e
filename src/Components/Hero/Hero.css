@@ -1,0 +1,13 @@
+.purpleColor{
+  color: var(--secondary);
+  text-transform: capitalize;
+}
+
+.Hero .badge{
+  color: var(--secondary);
+  background: #c780fa4b;
+  border-radius: none;
+}
+.Hero .subtitle{
+  font-weight: lighter;
+}

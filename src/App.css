@@ -1,0 +1,8 @@
+:root{
+  --primary: white;
+  --secondary: #C780FA;
+  
+}
+.bg-purple{
+  background: var(--secondary);
+}
