@@ -1,7 +1,21 @@
 .footer{
+  font-weight: 200;
   background: var(--secondary);
   color: var(--primary);
+  text-transform: capitalize;
+  padding: 3rem 0;
 }
 .footer ul li {
   list-style: none;
+  font-size: 0.95rem;
+  padding-top: 0.8rem;
+}
+.footer a{
+  text-decoration: none;
+  color: var(--primary);
+
+}
+.footer .right-border{
+  border-right:  dashed 0.8px rgba(255, 255, 255, 0.5);
+  
 }

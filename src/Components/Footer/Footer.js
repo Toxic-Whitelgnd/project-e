@@ -1,18 +1,19 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="container ">
-        <div className="row">
+        <div className="row p-2">
           <div className="col-lg-2">
             <img src="" alt="logo and name" />
           </div>
           <div className="col">
-            
             <ul>
-              <li>About</li>
+              <li> <Link to="/about">About</Link> </li>
               <li>contact us</li>
               <li>site map</li>
               <li>RSS feed</li>
@@ -20,7 +21,6 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col">
-           
             <ul>
               <li>Facebook</li>
               <li>twitter</li>
@@ -29,8 +29,7 @@ const Footer = () => {
               <li>privacy policy</li>
             </ul>
           </div>
-          <div className="col">
-            
+          <div className="col right-border">
             <ul>
               <li>blog</li>
               <li>hub</li>
@@ -39,7 +38,24 @@ const Footer = () => {
               <li>Cookie Policy</li>
             </ul>
           </div>
-          <div className="col-lg-5">top posts</div>
+          <div className="col-lg-5">
+           
+            <ul>
+              <h6> top posts</h6>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                repellendus?
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                repellendus?
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                repellendus?
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

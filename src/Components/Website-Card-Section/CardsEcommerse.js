@@ -3,7 +3,7 @@ import React from "react";
 const CardsEcommerse = (props) => {
   return (
     <>
-      <div className="col-lg-4">
+      <div className="col-lg-3">
         <div class="card pt-5 ">
           <div className="topBadge">{props.badge}</div>
           <div className="row">
@@ -24,7 +24,7 @@ const CardsEcommerse = (props) => {
 
           <div class="card-body ">
             <p class="card-text">
-              {props.desc}
+              {props.desc.slice(0,55)}...
             </p>
             <div className="d-flex justify-content-center align-items-center">
               <a href={props.siteLink} class="btn ">

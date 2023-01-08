@@ -3,8 +3,8 @@ import React from 'react'
 const CardsBuilder = (props) => {
   return (
     <>
-      <div className="col-lg-4">
-        <div class="card  p-2">
+      <div className="col-lg-3">
+        <div class="card pt-3 ">
          
           <div className="row">
             <div className="col-lg-4 ml-2">
@@ -24,7 +24,7 @@ const CardsBuilder = (props) => {
 
           <div class="card-body ">
             <p class="card-text">
-              {props.desc}
+              {props.desc.slice(0,55)}...
             </p>
             <div className="d-flex justify-content-center align-items-center">
               <a href={props.siteLink} class="btn ">

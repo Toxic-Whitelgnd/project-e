@@ -1,6 +1,6 @@
 .purpleColor{
   color: var(--secondary);
-  text-transform: capitalize;
+  text-transform: lowercase;
 }
 
 .Hero .badge{
@@ -9,5 +9,10 @@
   border-radius: none;
 }
 .Hero .subtitle{
-  font-weight: lighter;
+  font-weight: 300;
+  width: 70%;
+}
+.Hero h1{
+  font-weight: 700;
+  line-height: 160%;
 }

@@ -1,0 +1,18 @@
+.NavBarSection {
+  font-size: 1.07rem;
+}
+
+.navbar
+{
+  
+  z-index: 99;
+  
+}
+
+.nav-link:hover{
+  color: var(--secondary) !important;
+}
+.active{
+  color: var(--secondary) !important;
+  font-weight: 600;
+}

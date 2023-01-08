@@ -9,8 +9,8 @@ const WebsiteBuilder1 = () => {
 
   return (
     <>
-      <div className="container WebsiteBuilder">
-        <h3>ecommerce</h3>
+      <div className="container WebsiteBuilder ">
+        <h3 className="my-5 boxtitle">E-commerce</h3>
         <div className="row ECard g-2">
           {ecommerseData.map((val, index) => {
             return (
