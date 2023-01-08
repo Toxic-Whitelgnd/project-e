@@ -23,8 +23,6 @@ function App() {
     <>
       <Router>
           <NavBar/>
-          <Hero/>
-          <WebsiteBuilder/>
         <Routes>
           <Route  path='/Blog' element={<BlogPage/>} />
           <Route  path='/Blog/:slug' element={<BlogPostPage/>} />
