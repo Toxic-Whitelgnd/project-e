@@ -10,8 +10,8 @@ const WebsiteBuilder1 = () => {
   return (
     <>
       <div className="container WebsiteBuilder">
-        <h1>ecommerce</h1>
-        <div className="row ECard">
+        <h3>ecommerce</h3>
+        <div className="row ECard g-2">
           {ecommerseData.map((val, index) => {
             return (
               <CardsEcommerse
