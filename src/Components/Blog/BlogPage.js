@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { Client } from '../../lib/client';
-import "../Blog/BlogPage.css"
-
+// import "../Blog/BlogPage.css"
+import BlogCard from './blogCard';
 
 const BlogPage = () => {
     const [Blogpost,setBlogpost] = useState([]);
@@ -28,12 +28,25 @@ const BlogPage = () => {
         .catch(console.error);
     },[]);
   return (
-    <div>BlogPage
-        <div>
-            <h3>This is blog page</h3>
-
-        </div>
-    </div>
+    <>
+    <div className="container text-center mt-2">
+      <h1 className="Heading">Recent posts form our Blog</h1>
+      
+        {Blogpost[0] && (
+          <div className="row">
+            {Blogpost.map((story) => (
+              <BlogCard
+                key={story.slug.current}
+                title={story.title}
+                img={story.mainImage.asset.url}
+                goTo={story.slug.current}
+                author={story.name}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   )
 }
 
