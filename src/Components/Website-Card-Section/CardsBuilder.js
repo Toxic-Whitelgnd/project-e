@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
-const CardsEcommerse = (props) => {
+const CardsBuilder = (props) => {
   return (
     <>
       <div className="col-lg-4">
-        <div class="card pt-5 ">
-          <div className="topBadge">{props.badge}</div>
+        <div class="card  p-2">
+         
           <div className="row">
             <div className="col-lg-4 ml-2">
               <img
@@ -35,7 +35,7 @@ const CardsEcommerse = (props) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default CardsEcommerse;
+export default CardsBuilder

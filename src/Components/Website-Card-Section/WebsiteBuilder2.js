@@ -1,71 +1,31 @@
 import React from 'react'
+import Data from './BuilderApi';
+import { useState } from 'react';
+import CardsBuilder from './CardsBuilder';
+
+
 
 const WebsiteBuilder2 = () => {
+  const [builderData, setBuilderData] = useState(Data);
   return (
     <>
       <div className="container WebsiteBuilder">
         <h3>website builder</h3>
-        <div className="row">
-          <div className="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
+        <div className="row ECard g-2">
+          {builderData.map((val, index) => {
+            return (
+              <CardsBuilder
+                key={index}
+                title={val.title}
+                desc={val.desc}
+                logo={val.logo}
+                reviewLink={val.reviewLink}
+                siteLink={val.siteLink}
+                badge={val.badge}
+                rating={val.rating}
+              />
+            );
+          })}
         </div>
       </div>
     </>

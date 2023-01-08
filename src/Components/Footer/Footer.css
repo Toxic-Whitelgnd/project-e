@@ -1,0 +1,7 @@
+.footer{
+  background: var(--secondary);
+  color: var(--primary);
+}
+.footer ul li {
+  list-style: none;
+}
