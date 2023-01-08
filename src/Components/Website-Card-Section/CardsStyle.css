@@ -1,0 +1,26 @@
+.ECard .card {
+  border-color: var(--secondary);
+  border-radius: 10px !important;
+  position: relative;
+  
+}
+.ECard .topBadge {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #eeee22;
+  padding: 0.2rem 2rem;
+  border-radius: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+  
+  color: #535301;
+}
+.ECard .card .btn{
+  background: var(--secondary);
+  text-transform: capitalize;
+  font-size: 1.05rem;
+  font-weight: 600;
+
+}

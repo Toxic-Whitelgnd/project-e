@@ -5,6 +5,8 @@ import NavBar from './Components/Navbar/Navbar';
 import BlogPage from './Components/Blog/BlogPage';
 import Footer from './Components/Footer/Footer';
 import BlogPostPage from './Components/Blog/BlogPostPage';
+import WebsiteBuilder from './Components/Website-Card-Section/WebsiteBuilder';
+
 
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
       <Router>
           <NavBar/>
           {/* <Hero/> */}
-          {/* <WebsiteBuilder/> */}
+          <WebsiteBuilder/> 
         <Routes>
           <Route  path='/Blog' element={<BlogPage/>} />
           <Route  path='/Blog/:slug' element={<BlogPostPage/>} />

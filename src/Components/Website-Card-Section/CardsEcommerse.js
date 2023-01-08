@@ -1,25 +1,41 @@
-import React from 'react'
+import React from "react";
 
-const CardsEcommerse = () => {
+const CardsEcommerse = (props) => {
   return (
     <>
-      <div className="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
+      <div className="col-lg-4">
+        <div class="card pt-5 ">
+          <div className="topBadge">{props.badge}</div>
+          <div className="row">
+            <div className="col-lg-4 ml-2">
+              <img
+                src={props.logo}
+                className="card-img-custom img-fluid"
+                alt="..."
+                height="65px"
+              />
+            </div>
+            <div className="col-lg-8">
+              <h5 class="card-title">{props.title}</h5>
+              <h6>Rating:{props.rating}</h6>
+              <a href={props.reviewLink}>Read Full Review</a>
             </div>
           </div>
-    </>
-  )
-}
 
-export default CardsEcommerse
+          <div class="card-body ">
+            <p class="card-text">
+              {props.desc}
+            </p>
+            <div className="d-flex justify-content-center align-items-center">
+              <a href={props.siteLink} class="btn ">
+                vist site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default CardsEcommerse;

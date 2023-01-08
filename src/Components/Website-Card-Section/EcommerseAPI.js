@@ -2,8 +2,8 @@ const Data = [
   {
     id: 1,
     title: "Shopify",
-    logo:"https://www.pcsjammu.org/images/coming-soon.png",
-    rating: 2,
+    logo:"https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
+    rating: "⭐⭐⭐⭐",
     badge: "our top pick",
     reviewLink: "https://www.pcsjammu.org/images/coming-soon.png",
     siteLink: "https://www.pcsjammu.org/images/coming-soon.png",
@@ -12,7 +12,8 @@ const Data = [
   {
     id: 2,
     title: "Shopify",
-    rating: 2,
+    logo:"https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
+    rating: "⭐⭐⭐⭐",
     badge: "our top pick",
     reviewLink: "https://www.pcsjammu.org/images/coming-soon.png",
     siteLink: "https://www.pcsjammu.org/images/coming-soon.png",
@@ -21,7 +22,8 @@ const Data = [
   {
     id: 3,
     title: "Shopify",
-    rating: 2,
+    logo:"https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
+    rating: "⭐⭐⭐⭐",
     badge: "our top pick",
     reviewLink: "https://www.pcsjammu.org/images/coming-soon.png",
     siteLink: "https://www.pcsjammu.org/images/coming-soon.png",
@@ -30,7 +32,8 @@ const Data = [
   {
     id: 4,
     title: "Shopify",
-    rating: 2,
+    logo:"https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
+    rating: "⭐⭐⭐⭐",
     badge: "our top pick",
     reviewLink: "https://www.pcsjammu.org/images/coming-soon.png",
     siteLink: "https://www.pcsjammu.org/images/coming-soon.png",
