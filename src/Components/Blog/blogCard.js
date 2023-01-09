@@ -10,18 +10,21 @@ const blogCard = ({ title, img, goTo, author, publish, body }) => {
   return (
     <>
       <div className="card Blog_Card ">
-        <div className="row">
-          <div className="col">
+        <div className="row my-3">
+          <div className="col-lg-1">
             <i className="Author-icon">
               <FontAwesomeIcon icon={faUser} />
             </i>
+          </div>
+          <div className="col">
             <p className="card-text">{author}</p>
           </div>
-
-          <div className="col">
+          <div className="col-lg-1">
             <i className="Calender-icon">
               <FontAwesomeIcon icon={faCalendar} />
             </i>
+          </div>
+          <div className="col">
             <p>
               {publish && <>{format(new Date(publish), "MMMM dd , yyyy")}</>}
             </p>
