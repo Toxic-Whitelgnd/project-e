@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonAni from '../button-animation/Button-ani';
 
 const CardsEcommerse = (props) => {
   return (
@@ -27,8 +28,9 @@ const CardsEcommerse = (props) => {
               {props.desc.slice(0,55)}...
             </p>
             <div className="d-flex justify-content-center align-items-center">
-              <a href={props.siteLink} class="btn ">
-                vist site
+              <a href={props.siteLink}>
+              <ButtonAni widht={'95px'} height={'45px'} text={'Visit Site'} 
+                      background={'#7e57c2'} color={'#000'} hoverbackground={'#8659c2'} hovercolor={'d9aef4'} borderRad={'15px'} />
               </a>
             </div>
           </div>
