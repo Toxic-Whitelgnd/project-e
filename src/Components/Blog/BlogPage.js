@@ -1,7 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import { Client } from '../../lib/client';
-// import "../Blog/BlogPage.css"
+import "../Blog/BlogPage.css"
 import BlogCard from './blogCard';
+import { motion } from "framer-motion"
+import ButtonAni from '../button-animation/Button-ani';
 
 const BlogPage = () => {
     const [Blogpost,setBlogpost] = useState([]);
@@ -44,6 +46,7 @@ const BlogPage = () => {
       
         {Blogpost[0] && (
           <div className="row">
+          
             {Blogpost.map((story) => (
               <BlogCard
                 key={story.slug.current}

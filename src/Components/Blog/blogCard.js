@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"
-
+import ButtonAni from '../button-animation/Button-ani';
 
 const blogCard = ({ title, img, goTo, author }) => {
   return (
@@ -13,8 +12,9 @@ const blogCard = ({ title, img, goTo, author }) => {
             <div className="card-body">
               <h4 className="card-title">{title}</h4>
               <p className="card-text">Author : {author}</p>
-              <Link to={`/Blog/${goTo}`} className="btn btn-primary">
-                know more
+              <Link to={`/Blog/${goTo}`}>
+                  <ButtonAni widht={'100px'} height={'40px'} text={'Read'} 
+                      background={'#8659c2'} color={'#d9aef4'}  borderRad={'18px'} />
               </Link>
               
             </div>

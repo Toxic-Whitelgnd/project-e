@@ -1,0 +1,16 @@
+.box {
+    /* width: 200px;
+    height: 80px; */
+    border-radius: 50px;
+    background: #d9aef4;
+    cursor: pointer;
+    color: #8659c2;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-decoration: none;
+  }
+  .box:hover{
+    color: #d9aef4;
+    background: #8659c2;
+  }
