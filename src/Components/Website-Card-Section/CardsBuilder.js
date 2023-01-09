@@ -4,7 +4,7 @@ import ButtonAni from '../button-animation/Button-ani';
 const CardsBuilder = (props) => {
   return (
     <>
-      <div className="col-lg-4">
+      <div className="col-lg-3">
         <div class="card pt-3 ">
          
           <div className="row">
@@ -24,7 +24,7 @@ const CardsBuilder = (props) => {
           </div>
 
           <div class="card-body ">
-            <p class="card-text text-wrap">
+            <p class="card-text">
               {props.desc.slice(0,55)}...
             </p>
             <div className="d-flex justify-content-center align-items-center">
