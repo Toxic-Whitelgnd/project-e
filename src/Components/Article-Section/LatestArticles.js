@@ -3,6 +3,7 @@ import { Client } from "../../lib/client";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import "./Articles.css"
+import ButtonAni from '../button-animation/Button-ani';
 
 const LatestArticles = () => {
   const [Blogpost, setBlogpost] = useState([]);
@@ -56,10 +57,12 @@ const LatestArticles = () => {
                   <div className="col-lg-2 d-flex justify-content-center align-items-center">
                     <Link
                       to={`/Blog/${story.slug.current}`}
-                      className="Articlebtn"
+                      // className="Articlebtn"
                     >
-                      Read
+                      <ButtonAni widht={'100px'} height={'50px'} text={'Read'} 
+                      background={'#d9aef4'} color={'#8659c2'}  borderRad={'50px'} />
                     </Link>
+                    
                   </div>
                 </div>
               </>
