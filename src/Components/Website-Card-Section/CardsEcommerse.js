@@ -4,7 +4,7 @@ import ButtonAni from '../button-animation/Button-ani';
 const CardsEcommerse = (props) => {
   return (
     <>
-      <div className="col-lg-3">
+      <div className="col-lg-3 position-relative">
         <div class="card pt-5 ">
           <div className="topBadge">{props.badge}</div>
           <div className="row">
