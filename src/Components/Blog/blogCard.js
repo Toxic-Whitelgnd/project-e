@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"
+
 
 const blogCard = ({ title, img, goTo, author }) => {
   return (
@@ -14,6 +16,7 @@ const blogCard = ({ title, img, goTo, author }) => {
               <Link to={`/Blog/${goTo}`} className="btn btn-primary">
                 know more
               </Link>
+              
             </div>
           </div>
         </div>
