@@ -61,6 +61,21 @@
     left: 31%;
     margin: 1rem;
   }
+
+
+
+  .Author-icon{
+    background: rgba(255, 255, 137, 0.699);
+    padding: 0.8rem;
+    border-radius: 12px;
+    color: brown;
+  }
+  .Calender-icon{
+    background: rgba(203, 203, 255, 0.63);
+    padding: 0.8rem;
+    border-radius: 12px;
+    color: var(--secondary);
+  }
   
   @media screen and (max-width: 600px) {
     .Banner_Content {

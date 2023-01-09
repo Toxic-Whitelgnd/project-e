@@ -42,8 +42,6 @@ const BlogPage = () => {
   return (
     <>
     <div className="container text-center mt-2" >
-      <h1 className="Heading" id="blogpage">Recent posts form our Blog</h1>
-      
         {Blogpost[0] && (
           <div className="row">
           
@@ -54,6 +52,8 @@ const BlogPage = () => {
                 img={story.mainImage.asset.url}
                 goTo={story.slug.current}
                 author={story.name}
+                publish={story.publishedAt}
+                body={story.body}
               />
             ))}
           </div>

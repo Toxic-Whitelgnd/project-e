@@ -86,7 +86,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to="/reviews"
+                    to="/Review"
                     className="nav-link pe-4"
                     aria-current="page"
                     activeClassName="active"

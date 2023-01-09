@@ -9,16 +9,15 @@ import WebsiteBuilder from './Components/Website-Card-Section/WebsiteBuilder';
 import ReviewPages from './Components/Reviews/ReviewPages';
 import ReviewPostPage from './Components/Reviews/ReviewPostPage';
 import LatestArticles from './Components/Article-Section/LatestArticles';
+import Home from './Home';
 
 function App() {
   return (
     <>
       <Router>
           <NavBar/>
-          <Hero/>
-          <WebsiteBuilder/>
-          <LatestArticles/>
         <Routes>
+          <Route path='/' index element={<Home/>}/>
           <Route  path='/Blog' element={<BlogPage/>} />
           <Route  path='/Blog/:slug' element={<BlogPostPage/>} />
           <Route path='/Review' element={<ReviewPages />} />
