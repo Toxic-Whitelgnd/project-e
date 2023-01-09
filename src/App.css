@@ -17,3 +17,13 @@ body{
 .bg-purple{
   background: var(--secondary);
 }
+
+
+/* for the side rev in blog page and reviewpage this is the css */
+
+.sideRev p{
+  font-size: 0.8rem;
+}
+.sideRev a:hover{
+  text-decoration: underline;
+}

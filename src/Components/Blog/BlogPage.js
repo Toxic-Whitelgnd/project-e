@@ -4,6 +4,7 @@ import "../Blog/BlogPage.css";
 import BlogCard from "./blogCard";
 import { motion } from "framer-motion";
 import ButtonAni from "../button-animation/Button-ani";
+import SideBarReviews from './../Reviews/SideBarReviews';
 
 const BlogPage = () => {
   const [Blogpost, setBlogpost] = useState([]);
@@ -43,22 +44,28 @@ const BlogPage = () => {
   return (
     <>
       <div className="container  mt-2">
-        <div className="col-lg-8">
-          {Blogpost[0] && (
-            <div className="row ">
-              {Blogpost.map((story) => (
-                <BlogCard
-                  key={story.slug.current}
-                  title={story.title}
-                  img={story.mainImage.asset.url}
-                  goTo={story.slug.current}
-                  author={story.name}
-                  publish={story.publishedAt}
-                  body={story.body}
-                />
-              ))}
-            </div>
-          )}
+        <div className="row g-5">
+          <div className="col-lg-8">
+            {Blogpost[0] && (
+              <div className="row ">
+                {Blogpost.map((story) => (
+                  <BlogCard
+                    key={story.slug.current}
+                    title={story.title}
+                    img={story.mainImage.asset.url}
+                    goTo={story.slug.current}
+                    author={story.name}
+                    publish={story.publishedAt}
+                    body={story.body}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="col-lg-4 ">
+            <SideBarReviews />
+          </div>
+          
         </div>
       </div>
     </>
