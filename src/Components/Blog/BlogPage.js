@@ -24,7 +24,6 @@ const BlogPage = () => {
                 title,
                 slug,
                 body,
-                viewscount,
                 publishedAt,
                 mainImage {
                   asset -> {

@@ -10,7 +10,6 @@ const WebsiteBuilder2 = () => {
       <div className="container WebsiteBuilder">
         <h3 className="my-5 boxtitle">website builder</h3>
         <div className="row ECard g-2">
-        <div className="best-product">
           {builderData.map((val, index) => {
             return (
               <CardsBuilder
@@ -25,7 +24,6 @@ const WebsiteBuilder2 = () => {
               />
             );
           })}
-          </div>
         </div>
       </div>
     </>
