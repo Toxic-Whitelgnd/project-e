@@ -5,6 +5,16 @@ import BlogCard from './blogCard';
 
 const BlogPage = () => {
     const [Blogpost,setBlogpost] = useState([]);
+    const scrolltoview = () => {
+      var element = document.getElementById('blogpage');
+      if (element){
+        element.scrollIntoView();
+      }
+    }
+
+    useEffect(() => {
+      scrolltoview();
+  }, []);
     useEffect(()=>{
         Client.fetch(
             `*[_type == "post"] {
@@ -29,8 +39,8 @@ const BlogPage = () => {
     },[]);
   return (
     <>
-    <div className="container text-center mt-2">
-      <h1 className="Heading">Recent posts form our Blog</h1>
+    <div className="container text-center mt-2" >
+      <h1 className="Heading" id="blogpage">Recent posts form our Blog</h1>
       
         {Blogpost[0] && (
           <div className="row">
