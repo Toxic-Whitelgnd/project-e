@@ -3,6 +3,8 @@ import CardsEcommerse from "./CardsEcommerse";
 import Data from "./EcommerseAPI";
 import { useState } from "react";
 import "./CardsStyle.css"
+import BestAndSell from "../Best-Section/BestAndSell";
+
 
 const WebsiteBuilder1 = () => {
   const [ecommerseData, setEcommerseData] = useState(Data);
@@ -11,7 +13,8 @@ const WebsiteBuilder1 = () => {
     <>
       <div className="container WebsiteBuilder ">
         <h3 className="my-5 boxtitle">E-commerce</h3>
-        <div className="row ECard g-2">
+       
+        <div className="row ECard g-2 ">
           {ecommerseData.map((val, index) => {
             return (
               <CardsEcommerse
@@ -27,7 +30,8 @@ const WebsiteBuilder1 = () => {
             );
           })}
         </div>
-      </div>
+        </div>
+  
     </>
   );
 };

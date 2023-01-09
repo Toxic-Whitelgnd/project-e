@@ -39,6 +39,16 @@ const Data = [
     siteLink: "https://www.pcsjammu.org/images/coming-soon.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo placeat suscipit sapiente iste maxime quisquam expedita optio itaque consectetur!",
   },
+  {
+    id: 5,
+    title: "Shopify",
+    logo:"https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
+    rating: "⭐⭐⭐⭐",
+    badge: "our pick",
+    reviewLink: "https://www.pcsjammu.org/images/coming-soon.png",
+    siteLink: "https://www.pcsjammu.org/images/coming-soon.png",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo placeat suscipit sapiente iste maxime quisquam expedita optio itaque consectetur!",
+  },
   
 ];
 
