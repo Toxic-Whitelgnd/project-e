@@ -15,6 +15,7 @@ const WebsiteBuilder1 = () => {
         <h3 className="my-5 boxtitle">E-commerce</h3>
        
         <div className="row ECard g-2 ">
+          <div className="best-product">
           {ecommerseData.map((val, index) => {
             return (
               <CardsEcommerse
@@ -29,6 +30,7 @@ const WebsiteBuilder1 = () => {
               />
             );
           })}
+          </div>
         </div>
         </div>
   

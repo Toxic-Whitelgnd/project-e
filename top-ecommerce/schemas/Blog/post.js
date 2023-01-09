@@ -52,6 +52,11 @@ export default {
         title: 'Body',
         type: 'blockContent',
       },
+      {
+        name:'viewscount',
+        title:'Fake Viewscount',
+        type:'number',
+      }
     ],
   
     preview: {
