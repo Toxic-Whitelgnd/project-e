@@ -10,6 +10,8 @@ import "./BlogPage.css";
 const urlFor = (source) =>
   urlBuilder({ projectId: "hb758s0i", dataset: "production" }).image(source);
 
+  
+
 const serializer = {
   types: {
   image: (props) => (
@@ -30,12 +32,19 @@ const serializer = {
 const BlogPostPage = () => {
     const [blogpost,setBlogpost] = useState([])
     const { slug } = useParams();
+    const scrolltoview = () => {
+      var element = document.getElementById('dam');
+      if (element){
+        element.scrollIntoView();
+      }
+    }
     const scrollUp = () => {
     window.scroll(0, 0);
     };
 
     useEffect(() => {
-        scrollUp();
+        // scrollUp();
+        scrolltoview();
     }, []);
 
     useEffect(() => {
@@ -63,8 +72,8 @@ const BlogPostPage = () => {
       }, [slug]);
 
     return (
-        <div className="BlogSingle mb-4">
-        <div className="container">
+        <div className="BlogSingle mb-4" >
+        <div className="container" id="dam" >
           {blogpost && (
             <section className="p-3 Banner_Content">
               {blogpost.mainImage && (

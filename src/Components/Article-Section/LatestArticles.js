@@ -7,6 +7,8 @@ import "./Articles.css"
 const LatestArticles = () => {
   const [Blogpost, setBlogpost] = useState([]);
 
+ 
+
   useEffect(() => {
     Client.fetch(
       `*[_type == "post"] {
