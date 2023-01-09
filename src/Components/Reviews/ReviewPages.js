@@ -1,12 +1,12 @@
-import React,{useState,useEffect} from 'react'
-import { Client } from '../../lib/client';
-import ReviewCard from './reviewcard'; 
+import React, { useState, useEffect } from "react";
+import { Client } from "../../lib/client";
+import ReviewCard from "./reviewcard";
 
 const ReviewPages = () => {
-    const [revposts,setRevposts] = useState([]);
-    useEffect(()=>{
-        Client.fetch(
-            `*[_type == "postReview"] {
+  const [revposts, setRevposts] = useState([]);
+  useEffect(() => {
+    Client.fetch(
+      `*[_type == "postReview"] {
                 title,
                 slug,
                 body,
@@ -21,16 +21,16 @@ const ReviewPages = () => {
                 },
                 "name": author -> name,
               } | order(publishedAt desc)`
-        ).then((data)=>{
-            setRevposts(data);
-            console.log(data);
-        })
-        .catch(console.error);
-    },[]);
-    return (
-        <div className="container text-center mt-2">
-      <h1 className="Heading">Recent Reviews</h1>
-      
+    )
+      .then((data) => {
+        setRevposts(data);
+        console.log(data);
+      })
+      .catch(console.error);
+  }, []);
+  return (
+    <div className="container  mt-2">
+      <div className="col-lg-8">
         {revposts[0] && (
           <div className="row">
             {revposts.map((story) => (
@@ -40,13 +40,16 @@ const ReviewPages = () => {
                 img={story.mainImage.asset.url}
                 goTo={story.slug.current}
                 author={story.name}
-                rating = {story.rating}
+                rating={story.rating}
+                publish={story.publishedAt}
+                body={story.body}
               />
             ))}
           </div>
         )}
       </div>
-    );
-}
+    </div>
+  );
+};
 
 export default ReviewPages;
