@@ -47,10 +47,10 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     to="/"
-                    exact
+                    exact="true"
                     className="nav-link pe-4"
                     aria-current="page"
-                    activeClassName="active"
+                    // activeClassName="active"
                     onClick={() => {
                       setHamShow(!HamShow);
                     }}
