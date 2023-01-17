@@ -29,3 +29,8 @@
   background: var(--secondary);
   color: var(--primary);
 }
+.LatestArticles .vie{
+  letter-spacing: 1px;
+  margin-left: 4px;
+  margin-top: -2px;
+}

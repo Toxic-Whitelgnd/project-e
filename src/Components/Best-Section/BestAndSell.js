@@ -9,7 +9,7 @@ const BestAndSell = () => {
         <div>
             <div className='container'>
                 <h3 className='my-5 boxtitle'>We Test . You Sell</h3>
-                <div className='best-product'>
+                <div className='best-product' id='scroll-style'>
                     {
                         bestsell.map((val,idx)=>{
                             return(
