@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import "./Articles.css"
 import ButtonAni from '../button-animation/Button-ani';
+import {FiEye} from "react-icons/fi"
 
 const LatestArticles = () => {
   const [Blogpost, setBlogpost] = useState([]);
@@ -17,6 +18,7 @@ const LatestArticles = () => {
             slug,
             body,
             publishedAt,
+            viewscount,
             mainImage {
               asset -> {
                 _id,
@@ -25,7 +27,7 @@ const LatestArticles = () => {
               alt,
             },
             "name": author -> name,
-          } | order(publishedAt desc)`
+          } | order(viewscount desc)`
     )
       .then((data) => {
         setBlogpost(data);
@@ -46,10 +48,15 @@ const LatestArticles = () => {
                   <div className="col-lg-10">
                     <h5 className="card-title ">{story.title}</h5>
                     <p className="card-desc">{story.body[0].children[0].text.slice(0, 100)}...</p>
-                    <p className="publishedAt">
+                    <p className="publishedAt row ">
                       {story.publishedAt && (
                         <>
-                          {format(new Date(story.publishedAt), " MMMM dd , yyyy")}
+                        <div className="col">
+                          {format(new Date(story.publishedAt), " MMMM dd , yyyy")} 
+                        </div>
+                        <div className="col d-flex align-items-center">
+                          <FiEye/> <span className="vie ">{story.viewscount}k views</span>
+                        </div>
                         </>
                       )}
                     </p>

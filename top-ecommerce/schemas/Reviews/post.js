@@ -56,6 +56,11 @@ export default {
         name:'rating',
         title:'Ratings',
         type:'number'
+      },
+      {
+        name:'viewscount',
+        title:'Fake Viewscount',
+        type:'number',
       }
     ],
   
