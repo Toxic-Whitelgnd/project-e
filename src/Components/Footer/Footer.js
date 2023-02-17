@@ -45,7 +45,7 @@ const Footer = () => {
                 {" "}
                 <Link to="/about">About</Link>{" "}
               </li>
-              <li>contact us</li>
+              <Link to="/contactus">contact us</Link>
               <li>site map</li>
               <li>RSS feed</li>
               <li>terms of use</li>
