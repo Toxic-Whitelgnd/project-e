@@ -3,6 +3,7 @@ import { Client } from "../../lib/client";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import ButtonAni from "./../button-animation/Button-ani";
+import "./Resource.css"
 
 const Resource = () => {
   const [Resourcepost, setResourcepost] = useState([]);
@@ -32,23 +33,25 @@ const Resource = () => {
 
   return (
     <>
+    <div className="container">
       <h1>Fantastic Resources & Tools for Ecommerce (Jan 2023)</h1>
       {Resourcepost[0] && (
         <div>
           {unique.map((head) => (
             <>
-              <h4>{head}</h4>
+              <h3 className="head" >{head}</h3>
               {Resourcepost.map((story) => 
               story.Rtype === head &&
               (
                 <div>
-                  <h5><a href={story.link}>{story.title2}</a> :{story.description}</h5>
+                  <p className="descs"><a href={story.link}>{story.title2}</a> :{story.description}</p>
                 </div>
               ))}
             </>
           ))}
         </div>
       )}
+      </div>
     </>
   );
 };

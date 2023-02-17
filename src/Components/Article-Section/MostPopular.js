@@ -34,7 +34,7 @@ const MostPopular = () => {
       .catch(console.error);
   }, []);
   return (
-    <div className="LatestArticles my-3">
+    <div className="LatestArticles ">
       <div className=" container py-5">
         <h2 className="fw-bold">Most Popular <span className="purpleColor ">articles</span></h2>
         {Blogpost[0] && (

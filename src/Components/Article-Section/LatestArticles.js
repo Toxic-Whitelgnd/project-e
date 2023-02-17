@@ -37,7 +37,7 @@ const LatestArticles = () => {
   }, []);
 
   return (
-    <div className="LatestArticles my-3">
+    <div className="LatestArticles mt-3">
       <div className=" container py-5">
         <h2 className="fw-bold">Latest <span className="purpleColor ">articles</span></h2>
         {Blogpost[0] && (

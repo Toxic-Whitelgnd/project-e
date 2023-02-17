@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import {FiEye} from "react-icons/fi"
 import ButtonAni from './../button-animation/Button-ani';
+import "./Tops.css"
 
 const TopEcoms = () => {
   const [Blogpost, setBlogpost] = useState([]);
@@ -33,7 +34,7 @@ const TopEcoms = () => {
       .catch(console.error);
   }, []);
   return (
-    <div className="LatestArticles my-3">
+    <div className="Tops my-3">
       <div className=" container py-5">
         <h2 className="fw-bold">Top Ecommerse <span className="purpleColor ">articles</span></h2>
         {Blogpost[0] && (
@@ -50,7 +51,7 @@ const TopEcoms = () => {
                       {story.publishedAt && (
                         <>
                         <div className="col">
-                        <FiEye/> <span className="vie ">{story.viewscount}k views</span>
+                       <i><FiEye/> </i> <span className="vie ">{story.viewscount}k views</span>
                         </div>
                         {/* <div className="col d-flex align-items-center">
                           <FiEye/> <span className="vie ">{story.viewscount}k views</span>

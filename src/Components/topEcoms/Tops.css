@@ -1,0 +1,38 @@
+
+.Tops h2 {
+  margin: 1rem;
+}
+.Tops .card-title{
+  font-weight: 600;
+  color: var(--secondary);
+  margin: 1.5rem 0;
+}
+.Tops .card-desc{
+  font-weight: 300;
+  text-transform: lowercase;
+}
+.Tops .publishedAt{
+  font-size: 0.90rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+.Tops .Articlebtn{
+  background: #d2a3f1c9;
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--secondary);
+}
+.Tops .Articlebtn:hover{
+  background: var(--secondary);
+  color: var(--primary);
+}
+.Tops .vie{
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-left: 4px;
+  margin-top: -2px;
+}
+.Tops i{
+  font-size: 1.5rem;
+}
