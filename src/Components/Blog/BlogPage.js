@@ -34,6 +34,12 @@ const BlogPage = () => {
                   alt,
                 },
                 "name": author -> name,
+                "authimg": author -> image {
+                  asset -> {
+                    _id,
+                    url
+                  },
+                },
               } | order(publishedAt desc)`
     )
       .then((data) => {
@@ -56,6 +62,7 @@ const BlogPage = () => {
                     img={story.mainImage.asset.url}
                     goTo={story.slug.current}
                     author={story.name}
+                    authimg = {story.authimg.asset.url}
                     publish={story.publishedAt}
                     body={story.body}
                   />

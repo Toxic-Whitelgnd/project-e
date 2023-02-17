@@ -63,6 +63,13 @@ const BlogPostPage = () => {
               alt,
             },
             "name": author -> name,
+            "authimg": author -> image {
+              asset -> {
+                _id,
+                url
+              },
+              alt,
+            },
           }`
           )
           .then((data) => {
@@ -85,6 +92,8 @@ const BlogPostPage = () => {
                 />
               )}
               <h1 className="Banner_Title">{blogpost.title}</h1>
+              <div className="Author-icons">
+              </div>
               <p className="Banner_author">
                 By {blogpost.name}:
                 {blogpost.publishedAt && (

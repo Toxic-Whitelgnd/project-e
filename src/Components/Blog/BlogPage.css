@@ -8,11 +8,11 @@
     margin: 4rem 2rem 2rem 0 !important;
     height: 300px !important;
   }
-  .BlogSingle img {
+  /* .BlogSingle img {
     width: 50%;
     height: auto;
     margin: 1rem;
-  }
+  } */
   .BlogSingle h1 {
     font-size: 3rem !important;
     color: var(--primary-blue);
@@ -67,6 +67,10 @@
     border-radius: 12px;
     color: brown;
   }
+  .auth-cont{
+    width: 50px !important;
+    height: 55px !important ;
+  }
   .Calender-icon{
     background: rgba(203, 203, 255, 0.63);
     padding: 0.8rem;
@@ -82,11 +86,17 @@
     border-radius: 0;
   }
 
-  .Blog_Card img{
-    border-radius: 25px !important;
-    height: 200px !important;
+  /* .Blog_Card img{
+    
+  } */
+  .blog-img{
+    border-radius: 25px;
+    height: 200px;
     margin: 2rem 0;
   }
+
+
+
   
   @media screen and (max-width: 600px) {
     .Banner_Content {
