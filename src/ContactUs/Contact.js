@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot,faPhone,faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faFacebook,faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   return (
@@ -13,13 +14,13 @@ const Contact = () => {
               <div className="contact-detail">
                 <h1 className="section-title">Contact us</h1>
 
-                <ul className="contact-ul">
-                  <li>
+                <ul className="contact-ul ">
+                  <li className="my-4">
                     <i className="fa fa-location-dot"><FontAwesomeIcon icon={faLocationDot} /></i> 91, Ram Nagar, Ram
                     Mandir, Delhi
                   </li>
 
-                  <li>
+                  <li className="my-4">
                     <i className="fa fa-phone"><FontAwesomeIcon icon={faPhone} /></i>
                     <a href="tel:08510004495">
                       <b>0255000XXXX</b>
@@ -30,7 +31,7 @@ const Contact = () => {
                     </a>
                   </li>
 
-                  <li>
+                  <li className="my-4">
                     <i className="fa-solid fa-envelope"><FontAwesomeIcon icon={faEnvelope} /></i>
                     <a href="mailto:pardeepkumar4bjp@gmail.com">
                       <b> demounknown@gmail.com</b>
@@ -40,13 +41,13 @@ const Contact = () => {
 
                 <span>
                   <a href="#" className="fb">
-                    <i className="fa-brands fa-facebook"></i>
+                    <i className="fa-brands fa-facebook"><FontAwesomeIcon icon={faFacebook} /></i>
                   </a>
                   <a href="#" className="insta">
-                    <i className="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"><FontAwesomeIcon icon={faInstagram} /></i>
                   </a>
                   <a href="#" className="twitter">
-                    <i className="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"><FontAwesomeIcon icon={faTwitter} /></i>
                   </a>
                 </span>
               </div>
