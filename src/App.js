@@ -11,6 +11,7 @@ import ReviewPostPage from './Components/Reviews/ReviewPostPage';
 import LatestArticles from './Components/Article-Section/LatestArticles';
 import Home from './Home';
 import Resource from './Components/Resources/Resource';
+import Deals from './Components/Deals/Deals';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route  path='/Blog/:slug' element={<BlogPostPage/>} />
           <Route path='/Review' element={<ReviewPages />} />
           <Route path='/Review/:slug' element={<ReviewPostPage />} />
+          <Route path='/Deals' element={<Deals/>} />
         </Routes>
         <Footer/>
       </Router>

@@ -23,6 +23,12 @@ export default {
         type:'string',
       },
       {
+        name:'dealstype',
+        title: 'Deals Type',
+        type: 'reference',
+        to:{type: 'dealsgenerals'}
+      },
+      {
         name: 'mainImage',
         title: 'Main image',
         type: 'image',
