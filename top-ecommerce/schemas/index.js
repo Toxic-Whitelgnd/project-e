@@ -11,6 +11,11 @@ import categoryRev from "./Reviews/category"
 import Resourcepost from "./Resources/Resourcepost"
 import ResGeneral from "./Resources/ResGeneral"
 
+import DealsGenaral from "./Deals/DealsGenaral"
+import DealsPost from "./Deals/DealsPost"
+import blockContentDeal from "./Deals/blockContent"
+
+
 export const schemaTypes = [
     author,
     post,
@@ -22,5 +27,8 @@ export const schemaTypes = [
     categoryRev,
     ResGeneral,
     Resourcepost,
+    DealsGenaral,
+    DealsPost,
+    blockContentDeal
 
 ]
