@@ -8,6 +8,9 @@ import postRev from "./Reviews/post"
 import blockContentRev from "./Reviews/blockContent"
 import categoryRev from "./Reviews/category"
 
+import Resourcepost from "./Resources/Resourcepost"
+import ResGeneral from "./Resources/ResGeneral"
+
 export const schemaTypes = [
     author,
     post,
@@ -17,5 +20,7 @@ export const schemaTypes = [
     postRev,
     blockContentRev,
     categoryRev,
+    ResGeneral,
+    Resourcepost,
 
 ]
