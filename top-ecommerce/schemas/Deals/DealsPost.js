@@ -30,25 +30,33 @@ export default {
         hotspot: true,
       },
     },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    },
-    {
-      name: 'deallink',
-      title: 'Deallink',
-      type: 'url',
-    },
-    {
-      name: 'viewscount',
-      title: 'Fake Viewscount',
-      type: 'number',
-    },
-  ],
-}
+      {
+        name:'dealstype',
+        title: 'Deals Type',
+        type: 'reference',
+        to:{type: 'dealsgenerals'}
+      },
+      {
+        name: 'publishedAt',
+        title: 'Published at',
+        type: 'datetime',
+      },
+      {
+        name: 'body',
+        title: 'Body',
+        type: 'blockContent',
+      },
+      {
+        name:'deallink',
+        title:'Deallink',
+        type:'url',
+      },
+      {
+        name:'viewscount',
+        title:'Fake Viewscount',
+        type:'number',
+      }
+    ],
+  
+
+  }
