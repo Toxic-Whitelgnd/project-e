@@ -32,15 +32,30 @@ const Deals = () => {
           })
           .catch(console.error);
       }, []);
+
+      const unique = [...new Set(Dealpost.map((item) => item.Dtype))];
+
     return (
         <div className="LatestArticles my-3">
         <div className=" container py-5">
             <h2 className="fw-bold">Top<span className="purpleColor "> Hot Deals</span></h2>
             <div className="d-flex dealcontainer">
             {
-                Dealpost.map((d)=>(
-                    <div>
-                        <h2>{d.Dtype}</h2>
+              
+              Dealpost[0] && (
+                <div className="wrapper">
+                  {
+                    unique.map((head)=>(
+                      <>
+                      
+                      <h3>{head}</h3>
+                      <div className="content-cont">
+                      {
+                     
+                    Dealpost.map((d)=>
+                    d.Dtype === head &&
+                    (
+                    <div className="wrapper-sec">
                         <DealCards 
                         title = {d.title}
                         image = {d.mainImage.asset.url}
@@ -53,6 +68,17 @@ const Deals = () => {
                 ))
             }
             </div>
+                      </>
+                    ))
+                  }
+                </div>
+              )
+       
+            }
+
+            
+            </div>
+            
         </div>
         </div>
     );

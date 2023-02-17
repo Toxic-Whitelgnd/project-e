@@ -2,10 +2,39 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 40px;
+    row-gap: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+.wrapper{
+
+    row-gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    column-gap: 40px;
+    
+}
+.content-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+}
+.wrapper-sec{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    row-gap: 40px;
+    align-items: center;
 }
 
 .sb{
     color: #bc76e8 !important;  
+}
+.card-btn{
+    margin-top: 40px !important;
+    display: flex;
+    justify-content: center;
 }
