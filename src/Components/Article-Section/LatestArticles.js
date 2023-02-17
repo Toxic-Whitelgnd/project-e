@@ -27,7 +27,7 @@ const LatestArticles = () => {
               alt,
             },
             "name": author -> name,
-          } | order(viewscount desc)`
+          } | order(publishedAt desc)`
     )
       .then((data) => {
         setBlogpost(data);
@@ -53,9 +53,6 @@ const LatestArticles = () => {
                         <>
                         <div className="col">
                           {format(new Date(story.publishedAt), " MMMM dd , yyyy")} 
-                        </div>
-                        <div className="col d-flex align-items-center">
-                          <FiEye/> <span className="vie ">{story.viewscount}k views</span>
                         </div>
                         </>
                       )}
