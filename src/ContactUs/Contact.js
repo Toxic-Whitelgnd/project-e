@@ -1,27 +1,63 @@
-import React,{useRef} from "react";
+import React, { useRef } from "react";
+import { useState } from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot,faPhone,faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faFacebook,faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faFacebook,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
-import emailjs from '@emailjs/browser';
-
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [sub, setSub] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  const sendEmail = (e)=> {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log('send emailjs');
-    emailjs.sendForm('service_6d04z3a', 'template_bwsqtec', form.current, 'pyhdTp8Vi2Mjmp1so').
-    then((res)=>{
-        console.log(res.text);
-        window.alert("Your response has been sumbitted");
-        // clearDetails();
-    },(err)=>{
-        console.log(err.text);
-    })
-  }
+    console.log("send emailjs");
+    emailjs
+      .sendForm(
+        "service_6d04z3a",
+        "template_bwsqtec",
+        form.current,
+        "pyhdTp8Vi2Mjmp1so"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("✅✅✅your form has been submitted 👍👍👍");
+          setSuccess(true);
+          setEmail("");
+          setMessage("");
+          setName("");
+          setSub("");
+          setPhone("");
+
+        },
+        (error) => {
+          console.log(error.text);
+          alert("❌❌❌your form has been failed submit again");
+          setSuccess(false);
+          setEmail("");
+          setMessage("");
+          setSub("");
+          setPhone("");
+          setName("");
+        }
+      );
+  };
 
   const form = useRef();
 
@@ -36,12 +72,16 @@ const Contact = () => {
 
                 <ul className="contact-ul ">
                   <li className="my-4">
-                    <i className="fa fa-location-dot"><FontAwesomeIcon icon={faLocationDot} /></i> 91, Ram Nagar, Ram
-                    Mandir, Delhi
+                    <i className="fa fa-location-dot">
+                      <FontAwesomeIcon icon={faLocationDot} />
+                    </i>{" "}
+                    91, Ram Nagar, Ram Mandir, Delhi
                   </li>
 
                   <li className="my-4">
-                    <i className="fa fa-phone"><FontAwesomeIcon icon={faPhone} /></i>
+                    <i className="fa fa-phone">
+                      <FontAwesomeIcon icon={faPhone} />
+                    </i>
                     <a href="tel:08510004495">
                       <b>0255000XXXX</b>
                     </a>
@@ -52,7 +92,9 @@ const Contact = () => {
                   </li>
 
                   <li className="my-4">
-                    <i className="fa-solid fa-envelope"><FontAwesomeIcon icon={faEnvelope} /></i>
+                    <i className="fa-solid fa-envelope">
+                      <FontAwesomeIcon icon={faEnvelope} />
+                    </i>
                     <a href="mailto:pardeepkumar4bjp@gmail.com">
                       <b> demounknown@gmail.com</b>
                     </a>
@@ -61,20 +103,32 @@ const Contact = () => {
 
                 <span>
                   <a href="#" className="fb">
-                    <i className="fa-brands fa-facebook"><FontAwesomeIcon icon={faFacebook} /></i>
+                    <i className="fa-brands fa-facebook">
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </i>
                   </a>
                   <a href="#" className="insta">
-                    <i className="fa-brands fa-instagram"><FontAwesomeIcon icon={faInstagram} /></i>
+                    <i className="fa-brands fa-instagram">
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </i>
                   </a>
                   <a href="#" className="twitter">
-                    <i className="fa-brands fa-twitter"><FontAwesomeIcon icon={faTwitter} /></i>
+                    <i className="fa-brands fa-twitter">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </i>
                   </a>
                 </span>
               </div>
             </div>
 
             <div className="col-md-6">
-              <form action="#" ref={form} onSubmit={sendEmail} className="contFrm" method="POST">
+              <form
+                action="#"
+                ref={form}
+                onSubmit={sendEmail}
+                className="contFrm"
+                method="POST"
+              >
                 <div className="row">
                   <div className="col-sm-6">
                     <input
@@ -83,6 +137,11 @@ const Contact = () => {
                       placeholder="Your Name"
                       className="inptFld"
                       required
+                      aria-label="First name"
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
                     />
                   </div>
 
@@ -93,6 +152,10 @@ const Contact = () => {
                       placeholder="Email Address"
                       className="inptFld"
                       required
+                      value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
                     />
                   </div>
 
@@ -102,6 +165,10 @@ const Contact = () => {
                       name="phone"
                       placeholder="Phone Number"
                       className="inptFld"
+                      value={phone}
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                    }}
                       required
                     />
                   </div>
@@ -112,6 +179,10 @@ const Contact = () => {
                       name="sub"
                       placeholder="Subject"
                       className="inptFld"
+                      value={sub}
+                    onChange={(e) => {
+                      setSub(e.target.value);
+                    }}
                       required
                     />
                   </div>
@@ -123,6 +194,10 @@ const Contact = () => {
                       rows=""
                       cols=""
                       placeholder="Your Message..."
+                      value={message}
+                    onChange={(e) => {
+                      setMessage(e.target.value);
+                    }}
                       required
                     ></textarea>
                   </div>
@@ -136,11 +211,16 @@ const Contact = () => {
                     />
                   </div>
                 </div>
+                <div
+                className={`SucessBox primary-green ${
+                  success ? "" : "displayNONE"
+                }`}
+              >
+                <p>You have sucessfully submitted the form,Thank you </p>
+              </div>
               </form>
             </div>
           </div>
-
-          
         </div>
       </section>
     </>
