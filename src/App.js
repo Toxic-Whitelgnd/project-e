@@ -10,6 +10,8 @@ import ReviewPages from './Components/Reviews/ReviewPages';
 import ReviewPostPage from './Components/Reviews/ReviewPostPage';
 import LatestArticles from './Components/Article-Section/LatestArticles';
 import Home from './Home';
+import Resource from './Components/Resources/Resource';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/' index element={<Home/>}/>
           <Route  path='/Blog' element={<BlogPage/>} />
+          <Route  path='/Resource' element={<Resource/>} />
           <Route  path='/Blog/:slug' element={<BlogPostPage/>} />
           <Route path='/Review' element={<ReviewPages />} />
           <Route path='/Review/:slug' element={<ReviewPostPage />} />
