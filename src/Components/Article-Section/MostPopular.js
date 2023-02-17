@@ -34,9 +34,12 @@ const MostPopular = () => {
       .catch(console.error);
   }, []);
   return (
-    <div>
-      <div className="container">
-      {Blogpost.map((story) => (
+    <div className="LatestArticles my-3">
+      <div className=" container py-5">
+        <h2 className="fw-bold">Most Popular <span className="purpleColor ">articles</span></h2>
+        {Blogpost[0] && (
+          <div className="row p-5">
+            {Blogpost.map((story) => (
               <>
                 <div className="row">
                   <div className="col-lg-10">
@@ -46,11 +49,11 @@ const MostPopular = () => {
                       {story.publishedAt && (
                         <>
                         <div className="col">
-                          {format(new Date(story.publishedAt), " MMMM dd , yyyy")} 
+                        <FiEye/> <span className="vie ">{story.viewscount}k views</span>
                         </div>
-                        <div className="col d-flex align-items-center">
+                        {/* <div className="col d-flex align-items-center">
                           <FiEye/> <span className="vie ">{story.viewscount}k views</span>
-                        </div>
+                        </div> */}
                         </>
                       )}
                     </p>
@@ -68,6 +71,8 @@ const MostPopular = () => {
                 </div>
               </>
             ))}
+          </div>
+        )}
       </div>
     </div>
   )
