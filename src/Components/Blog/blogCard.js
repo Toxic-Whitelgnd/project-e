@@ -5,13 +5,15 @@ import ButtonAni from "./../button-animation/Button-ani";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { format } from "date-fns";
+import "./BlogPage.css";
 
-const blogCard = ({ title, img, goTo, author, publish, body }) => {
+const blogCard = ({ title, img, goTo, author, publish, body ,authimg}) => {
   return (
     <>
       <div className="card Blog_Card ">
         <div className="row my-3">
-          <div className="col-lg-1">
+        {/* className="col-lg-1" */}
+          <div className="col-lg-1"  > 
             <i className="Author-icon">
               <FontAwesomeIcon icon={faUser} />
             </i>
@@ -32,7 +34,7 @@ const blogCard = ({ title, img, goTo, author, publish, body }) => {
         </div>
         <h4 className="card-title">{title}</h4>
 
-        <img src={img} className="card-img-top img-fluid" alt={title} />
+        <img src={img} className="card-img-top img-fluid blog-img" alt={title} />
 
         <p className="card-desc">
           {body[0].children[0].text.slice(0, 250)}....
