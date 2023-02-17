@@ -16,6 +16,11 @@ export default{
 
         },
         {
+            name: 'title2',
+            title: 'Title2',
+            type: 'string',
+          },
+        {
             name:'link',
             title:'Link',
             type: 'url',
