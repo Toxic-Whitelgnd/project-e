@@ -39,7 +39,7 @@ const MostPopular = () => {
         <h2 className="fw-bold">Most Popular <span className="purpleColor ">articles</span></h2>
         {Blogpost[0] && (
           <div className="row p-5">
-            {Blogpost.map((story) => (
+            {Blogpost.slice(0,4).map((story) => (
               <>
                 <div className="row">
                   <div className="col-lg-10">

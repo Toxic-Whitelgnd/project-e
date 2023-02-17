@@ -11,6 +11,8 @@ import ReviewPostPage from './Components/Reviews/ReviewPostPage';
 import LatestArticles from './Components/Article-Section/LatestArticles';
 import Home from './Home';
 import Resource from './Components/Resources/Resource';
+import TopEcoms from './Components/topEcoms/TopEcoms';
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
           <Route path='/' index element={<Home/>}/>
           <Route  path='/Blog' element={<BlogPage/>} />
           <Route  path='/Resource' element={<Resource/>} />
+          <Route  path='/topecommerse' element={<TopEcoms/>} />
           <Route  path='/Blog/:slug' element={<BlogPostPage/>} />
           <Route path='/Review' element={<ReviewPages />} />
           <Route path='/Review/:slug' element={<ReviewPostPage />} />

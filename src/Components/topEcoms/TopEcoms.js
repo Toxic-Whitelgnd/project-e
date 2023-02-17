@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Client } from "../../lib/client";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
-import "./Articles.css"
-import ButtonAni from '../button-animation/Button-ani';
 import {FiEye} from "react-icons/fi"
+import ButtonAni from './../button-animation/Button-ani';
 
-const LatestArticles = () => {
+const TopEcoms = () => {
   const [Blogpost, setBlogpost] = useState([]);
-
- 
 
   useEffect(() => {
     Client.fetch(
@@ -27,7 +24,7 @@ const LatestArticles = () => {
               alt,
             },
             "name": author -> name,
-          } | order(publishedAt desc)`
+          } | order(viewscount desc)`
     )
       .then((data) => {
         setBlogpost(data);
@@ -35,25 +32,29 @@ const LatestArticles = () => {
       })
       .catch(console.error);
   }, []);
-
   return (
     <div className="LatestArticles my-3">
       <div className=" container py-5">
-        <h2 className="fw-bold">Latest <span className="purpleColor ">articles</span></h2>
+        <h2 className="fw-bold">Top Ecommerse <span className="purpleColor ">articles</span></h2>
         {Blogpost[0] && (
           <div className="row p-5">
-            {Blogpost.slice(0,4).map((story) => (
+            {Blogpost.map((story) => (
               <>
                 <div className="row">
                   <div className="col-lg-10">
                     <h5 className="card-title ">{story.title}</h5>
-                    <p className="card-desc">{story.body[0].children[0].text.slice(0, 100)}...</p>
+                    <p className="card-desc">{story.body[0].children[0].text.slice(0, 900)}...</p>
+                    <p className="card-desc">{story.body[1].children[0].text.slice(0, 900)}...</p>
+                    <p className="card-desc">{story.body[2].children[0].text.slice(0, 900)}...</p>
                     <p className="publishedAt row ">
                       {story.publishedAt && (
                         <>
                         <div className="col">
-                          {format(new Date(story.publishedAt), " MMMM dd , yyyy")} 
+                        <FiEye/> <span className="vie ">{story.viewscount}k views</span>
                         </div>
+                        {/* <div className="col d-flex align-items-center">
+                          <FiEye/> <span className="vie ">{story.viewscount}k views</span>
+                        </div> */}
                         </>
                       )}
                     </p>
@@ -75,7 +76,9 @@ const LatestArticles = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LatestArticles;
+export default TopEcoms
+
+
