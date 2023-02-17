@@ -1,10 +1,30 @@
-import React from "react";
+import React,{useRef} from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot,faPhone,faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faFacebook,faTwitter } from "@fortawesome/free-brands-svg-icons";
 
+import emailjs from '@emailjs/browser';
+
+
 const Contact = () => {
+
+  const sendEmail = (e)=> {
+    e.preventDefault();
+
+    console.log('send emailjs');
+    emailjs.sendForm('service_6d04z3a', 'template_bwsqtec', form.current, 'pyhdTp8Vi2Mjmp1so').
+    then((res)=>{
+        console.log(res.text);
+        window.alert("Your response has been sumbitted");
+        // clearDetails();
+    },(err)=>{
+        console.log(err.text);
+    })
+  }
+
+  const form = useRef();
+
   return (
     <>
       <section className="contact-sec sec-pad">
@@ -54,7 +74,7 @@ const Contact = () => {
             </div>
 
             <div className="col-md-6">
-              <form action="#" className="contFrm" method="POST">
+              <form action="#" ref={form} onSubmit={sendEmail} className="contFrm" method="POST">
                 <div className="row">
                   <div className="col-sm-6">
                     <input
@@ -99,6 +119,7 @@ const Contact = () => {
                   <div className="col-12">
                     <textarea
                       className="inptFld"
+                      name="message"
                       rows=""
                       cols=""
                       placeholder="Your Message..."
