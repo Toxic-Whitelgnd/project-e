@@ -16,3 +16,6 @@
   color: var(--secondary) !important;
   font-weight: 600;
 }
+.dropdown-menu{
+  margin: 2rem 0;
+}

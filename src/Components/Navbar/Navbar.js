@@ -3,8 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "./NavBar.css"
-
+import "./NavBar.css";
 
 const NavBar = () => {
   const [HamShow, setHamShow] = useState(false);
@@ -68,7 +67,7 @@ const NavBar = () => {
                       setHamShow(!HamShow);
                     }}
                   >
-                    Top Ecommerce 
+                    Top Ecommerce
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -97,32 +96,39 @@ const NavBar = () => {
                     Reviews
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/resource"
-                    className="nav-link pe-4"
-                    aria-current="page"
-                    activeClassName="active"
-                    onClick={() => {
-                      setHamShow(!HamShow);
-                    }}
+                <li className="nav-item dropdown ">
+                  <Link
+                    className="nav-link dropdown-toggle"
+                    to="/Services"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    
                   >
-                    Resource
-                  </NavLink>
+                    More
+                  </Link>
+                  <ul className="dropdown-menu ">
+                    <li className="mt-3">
+                      <Link className="dropdown-item" to="/resource">
+                        Resources
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/deals">
+                       Deals
+                      </Link>
+                    </li>
+                    <li className="mb-3">
+                      <Link className="dropdown-item" to="/contactus">
+                       Contact Us
+                      </Link>
+                    </li>
+                    
+                    
+                  </ul>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/deals"
-                    className="nav-link pe-4"
-                    aria-current="page"
-                    activeClassName="active"
-                    onClick={() => {
-                      setHamShow(!HamShow);
-                    }}
-                  >
-                   Deals
-                  </NavLink>
-                </li>
+                
+                
               </ul>
             </div>
           </div>

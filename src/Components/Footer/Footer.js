@@ -45,7 +45,9 @@ const Footer = () => {
                 {" "}
                 <Link to="/about">About</Link>{" "}
               </li>
-              <Link to="/contactus">contact us</Link>
+              <li>
+                <Link to="/contactus">contact us</Link>
+              </li>
               <li>site map</li>
               <li>RSS feed</li>
               <li>terms of use</li>
@@ -62,27 +64,30 @@ const Footer = () => {
           </div>
           <div className="col right-border">
             <ul>
-              <li>blog</li>
-              <li>hub</li>
-              <li>Advertising</li>
+              <li><Link to="/Blog">blog</Link></li>
+              <li><Link to="/Review">reviews</Link></li>
               <li>Disclosure</li>
               <li>Cookie Policy</li>
+              <li>credits</li>
             </ul>
           </div>
           <div className="col-lg-5">
             <ul>
               <h6> top posts</h6>
-              {Blogpost.slice(0,4).map((story) => (
-              <>
-                <li className="row">
-                  <div className="col-lg-10">
-                    <Link className="card-title"
-                    to={`/Blog/${story.slug.current}`}
-                    >{story.title}</Link>
-                  </div>
-                </li>
-              </>
-            ))}
+              {Blogpost.slice(0, 4).map((story) => (
+                <>
+                  <li className="row">
+                    <div className="col-lg-10">
+                      <Link
+                        className="card-title"
+                        to={`/Blog/${story.slug.current}`}
+                      >
+                        {story.title}
+                      </Link>
+                    </div>
+                  </li>
+                </>
+              ))}
             </ul>
           </div>
         </div>

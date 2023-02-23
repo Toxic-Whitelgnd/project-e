@@ -154,6 +154,9 @@ form.contFrm {
   width: 100%;
   max-width: 200px;
 }
+.displayNONE{
+  display: none;
+}
 
 /* Responcive css Start */
 

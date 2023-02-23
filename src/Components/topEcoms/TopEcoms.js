@@ -65,7 +65,7 @@ const TopEcoms = () => {
                       to={`/Blog/${story.slug.current}`}
                       // className="Articlebtn"
                     >
-                      <ButtonAni widht={'100px'} height={'50px'} text={'Read'} 
+                      <ButtonAni widht={'190px'} height={'60px'} text={'Continue Reading'} 
                       background={'#d9aef4'} color={'#8659c2'}  borderRad={'50px'} />
                     </Link>
                     
