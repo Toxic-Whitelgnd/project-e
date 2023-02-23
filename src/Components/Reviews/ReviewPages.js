@@ -31,7 +31,7 @@ const ReviewPages = () => {
   }, []);
   return (
     <div className="container  mt-2">
-      <div className="row g-5">
+      <div className="row g-5 rv">
         <div className="col-lg-8 ">
           {revposts[0] && (
             <div className="row">

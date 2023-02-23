@@ -48,8 +48,8 @@ a{
 
 }
 .best-product{
-  overflow-x: scroll;
-  overflow-y: hidden;
+  /* overflow-x: scroll;
+  overflow-y: hidden; */
   white-space: nowrap;
   display: flex;
   column-gap: 30px;

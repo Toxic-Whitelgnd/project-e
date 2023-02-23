@@ -38,7 +38,7 @@ const TopEcoms = () => {
       <div className=" container py-5">
         <h2 className="fw-bold">Top Ecommerse <span className="purpleColor ">articles</span></h2>
         {Blogpost[0] && (
-          <div className="row p-5">
+          <div className="row p-5 la">
             {Blogpost.map((story) => (
               <>
                 <div className="row">

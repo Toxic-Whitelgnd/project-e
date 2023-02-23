@@ -6,3 +6,12 @@
   font-size: 1.05rem;
   margin: 1rem 6rem;
 }
+@media screen and (max-width: 600px) {
+  .head{
+    margin: 1rem 1.2rem;
+  }
+  .descs{
+    /* font-size: 1.05rem; */
+    margin: 1rem 1.2rem;
+  }
+}

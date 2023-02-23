@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import BlockContent from "@sanity/block-content-to-react";
 import { Client } from "../../lib/client";
 import "./BlogPage.css";
+import ButtonAni from '../button-animation/Button-ani';
 
 
 const urlFor = (source) =>
@@ -109,16 +110,27 @@ const BlogPostPage = () => {
                 serializers={serializer}
                 className="BlockContent "
               />
-  
+
               <div className="d-flex justify-content-center align-items-center">
+
                 <Link
                   to="/blog"
-                  className="Banner_Read_More"
+                  // className="Banner_Read_More"
                 >
-                  Read More Blog posts
+                  <ButtonAni
+                    widht={"170px"}
+                    height={"40px"}
+                    text={"Read More Blog posts"}
+                    background={"#8659c2"}
+                    color={"#fff"}
+                    borderRad={"18px"}
+                  />
+                  
                 </Link>
               </div>
+              
             </section>
+            
           )}
         </div>
       </div>

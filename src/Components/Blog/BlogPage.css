@@ -102,6 +102,12 @@
     .Banner_Content {
       font-size: 0.9rem !important;
     }
+    .bl{
+      overflow: hidden;
+    }
+    .ai{
+      margin-bottom: 20px;
+    }
   }
   @media screen and (max-width: 1240px) {
   }

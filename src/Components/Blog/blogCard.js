@@ -13,15 +13,15 @@ const blogCard = ({ title, img, goTo, author, publish, body ,authimg}) => {
       <div className="card Blog_Card ">
         <div className="row my-3">
         {/* className="col-lg-1" */}
-          <div className="col-lg-1"  > 
+          <div className="col-lg-1 ai" > 
             <i className="Author-icon">
               <FontAwesomeIcon icon={faUser} />
             </i>
           </div>
-          <div className="col">
+          <div className="col ai">
             <p className="card-text">{author}</p>
           </div>
-          <div className="col-lg-1">
+          <div className="col-lg-1 ai">
             <i className="Calender-icon">
               <FontAwesomeIcon icon={faCalendar} />
             </i>
@@ -49,7 +49,7 @@ const blogCard = ({ title, img, goTo, author, publish, body ,authimg}) => {
               height={"40px"}
               text={"Read"}
               background={"#8659c2"}
-              color={"#d9aef4"}
+              color={"#fff"}
               borderRad={"18px"}
             />
           </Link>

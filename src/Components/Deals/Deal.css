@@ -29,12 +29,23 @@
     row-gap: 40px;
     align-items: center;
 }
+.dealss{
+    background-color: #fff;
+}
 
 .sb{
     color: #bc76e8 !important;  
+}
+.card-body{
+    background: #f9f0ffdb;
 }
 .card-btn{
     margin-top: 40px !important;
     display: flex;
     justify-content: center;
 }
+@media screen and (max-width: 600px) {
+    .card{
+        width: 18rem !important;
+    }
+  }

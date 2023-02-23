@@ -51,10 +51,10 @@ const BlogPage = () => {
   return (
     <>
       <div className="container  mt-2">
-        <div className="row g-5">
-          <div className="col-lg-8">
+        <div className="row g-5 bl">
+          <div className="col-lg-8 ">
             {Blogpost[0] && (
-              <div className="row ">
+              <div className="row p-3">
                 {Blogpost.map((story) => (
                   <BlogCard
                     key={story.slug.current}

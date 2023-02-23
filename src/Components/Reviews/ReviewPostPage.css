@@ -66,6 +66,9 @@
     .Banner_Content {
       font-size: 0.9rem !important;
     }
+    .rv{
+      padding: 1rem;;
+    }
   }
   @media screen and (max-width: 1240px) {
   }

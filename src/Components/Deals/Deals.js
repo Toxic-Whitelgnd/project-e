@@ -36,7 +36,7 @@ const Deals = () => {
       const unique = [...new Set(Dealpost.map((item) => item.Dtype))];
 
     return (
-        <div className="LatestArticles my-3">
+        <div className="dealss my-3">
         <div className=" container py-5">
             <h2 className="fw-bold">Top<span className="purpleColor "> Hot Deals</span></h2>
             <div className="d-flex dealcontainer">
