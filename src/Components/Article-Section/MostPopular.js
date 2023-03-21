@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import "./Articles.css"
 import ButtonAni from '../button-animation/Button-ani';
 import {FiEye} from "react-icons/fi"
+import MostPopularCards from "./MostPopularCards";
 
 const MostPopular = () => {
   const [Blogpost, setBlogpost] = useState([]);
@@ -37,11 +38,36 @@ const MostPopular = () => {
     <div className="LatestArticles ">
       <div className=" container py-5">
         <h2 className="fw-bold">Most Popular <span className="purpleColor ">articles</span></h2>
-        {Blogpost[0] && (
-          <div className="row p-5 la">
-            {Blogpost.slice(0,4).map((story) => (
+        <div className="row">
+       
+          
+          <div className="best-product2">
+            {Blogpost.map((story) => (
               <>
-                <div className="row">
+                <MostPopularCards 
+                    title={story.title}
+                    description ={story.body[0].children[0].text.slice(0, 100)}
+                    img={story.mainImage.asset.url}
+                    viewscount={story.viewscount}
+                    currentslug={story.slug.current}
+                />
+              </>
+            ))}
+          </div>
+          
+        
+       </div>
+       
+      </div>
+    </div>
+  )
+}
+
+export default MostPopular
+
+/*
+
+<div className="row">
                   <div className="col-lg-10">
                     <h5 className="card-title ">{story.title}</h5>
                     <p className="card-desc">{story.body[0].children[0].text.slice(0, 100)}...</p>
@@ -51,9 +77,9 @@ const MostPopular = () => {
                         <div className="col">
                         <FiEye/> <span className="vie ">{story.viewscount}k views</span>
                         </div>
-                        {/* <div className="col d-flex align-items-center">
+                        { <div className="col d-flex align-items-center">
                           <FiEye/> <span className="vie ">{story.viewscount}k views</span>
-                        </div> */}
+                        </div> }
                         </>
                       )}
                     </p>
@@ -69,13 +95,5 @@ const MostPopular = () => {
                     
                   </div>
                 </div>
-              </>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
 
-export default MostPopular
+*/
