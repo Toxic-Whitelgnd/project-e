@@ -40,3 +40,28 @@
     padding: 1rem !important;
   }
 }
+
+/* for most popular articles */
+.best-product2{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* white-space: nowrap; */
+  display: flex;
+  column-gap: 50px;
+  padding: 20px 0 50px 50px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  word-wrap: break-word;
+  /* display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; */
+  
+}
+
+.item-prdt{
+  display: inline-block;
+  /* word-wrap: break-word; */
+  overflow-wrap: break-word;
+  /* flex: 0 0 auto; */
+  /* column-gap: 10px; */
+}
