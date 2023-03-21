@@ -15,6 +15,10 @@ import DealsGenaral from "./Deals/DealsGenaral"
 import DealsPost from "./Deals/DealsPost"
 import blockContentDeal from "./Deals/blockContent"
 
+import bestglance from "./Absolutebestglance/bestglance"
+import bestglancegnerals from "./Absolutebestglance/bestglancegnerals"
+
+
 
 export const schemaTypes = [
     author,
@@ -29,6 +33,8 @@ export const schemaTypes = [
     Resourcepost,
     DealsGenaral,
     DealsPost,
-    blockContentDeal
+    blockContentDeal,
+    bestglance,
+    bestglancegnerals
 
 ]
