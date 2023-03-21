@@ -118,9 +118,9 @@ const BlogPostPage = () => {
                   // className="Banner_Read_More"
                 >
                   <ButtonAni
-                    widht={"170px"}
-                    height={"40px"}
-                    text={"Read More Blog posts"}
+                    widht={"180px"}
+                    height={"60px"}
+                    text={"View More Blogs"}
                     background={"#8659c2"}
                     color={"#fff"}
                     borderRad={"18px"}
