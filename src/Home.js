@@ -4,6 +4,9 @@ import WebsiteBuilder from './Components/Website-Card-Section/WebsiteBuilder';
 import LatestArticles from './Components/Article-Section/LatestArticles';
 import MostPopular from './Components/Article-Section/MostPopular';
 import Deals from './Components/Deals/Deals';
+import Comparision from './Components/Comparision/Comparision';
+
+
 
 const Home = () => {
   return (
@@ -12,6 +15,7 @@ const Home = () => {
       <WebsiteBuilder/>
       <LatestArticles/>
       <MostPopular />
+      
     </>
   )
 }

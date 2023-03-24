@@ -4,11 +4,10 @@ import "./Deal.css";
 import DealCards from "./DealCards";
 
 const Deals = () => {
-
-    const [Dealpost, setDealpost] = useState([]);
-    useEffect(() => {
-        Client.fetch(
-          `*[_type == "dealspost"] {
+  const [Dealpost, setDealpost] = useState([]);
+  useEffect(() => {
+    Client.fetch(
+      `*[_type == "dealspost"] {
                     title,
                     slug,
                     body,
@@ -25,63 +24,52 @@ const Deals = () => {
                     },
                     "Dtype": dealstype -> dealstype,
                   } | order(publishedAt desc)`
-        )
-          .then((data) => {
-            setDealpost(data);
-            console.log(data);
-          })
-          .catch(console.error);
-      }, []);
+    )
+      .then((data) => {
+        setDealpost(data);
+        console.log(data);
+      })
+      .catch(console.error);
+  }, []);
 
-      const unique = [...new Set(Dealpost.map((item) => item.Dtype))];
+  const unique = [...new Set(Dealpost.map((item) => item.Dtype))];
 
-    return (
-        <div className="dealss my-3">
-        <div className=" container py-5">
-            <h2 className="fw-bold">Top<span className="purpleColor "> Hot Deals</span></h2>
-            <div className="d-flex dealcontainer">
-            {
-              
-              Dealpost[0] && (
-                <div className="wrapper">
-                  {
-                    unique.map((head)=>(
-                      <>
-                      
-                      <h3>{head}</h3>
-                      <div className="content-cont">
-                      {
-                     
-                    Dealpost.map((d)=>
-                    d.Dtype === head &&
-                    (
-                    <div className="wrapper-sec">
-                        <DealCards 
-                        title = {d.title}
-                        image = {d.mainImage.asset.url}
-                        dealcaption = {d.dealcaption}
-                        deallink = {d.deallink}
-                        body = {d.body}
-                        />
-                    
-                    </div>
-                ))
-            }
+  return (
+    <div className="dealss my-3">
+      <div className=" container py-5">
+        <h2 className="fw-bold">
+          Top<span className="purpleColor "> Hot Deals</span>
+        </h2>
+        <div className="d-flex dealcontainer">
+          {Dealpost[0] && (
+            <div className="wrapper">
+              {unique.map((head) => (
+                <>
+                  <h3>{head}</h3>
+                  <div className="content-cont">
+                    {Dealpost.map(
+                      (d) =>
+                        d.Dtype === head && (
+                          <div className="wrapper-sec">
+                            <DealCards
+                              title={d.title}
+                              image={d.mainImage.asset.url}
+                              dealcaption={d.dealcaption}
+                              deallink={d.deallink}
+                              body={d.body}
+                            />
+                          </div>
+                        )
+                    )}
+                  </div>
+                </>
+              ))}
             </div>
-                      </>
-                    ))
-                  }
-                </div>
-              )
-       
-            }
-
-            
-            </div>
-            
+          )}
         </div>
-        </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default Deals;

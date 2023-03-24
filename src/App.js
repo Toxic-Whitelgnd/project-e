@@ -16,6 +16,7 @@ import Deals from "./Components/Deals/Deals";
 
 import TopEcoms from "./Components/topEcoms/TopEcoms";
 import Contact from "./ContactUs/Contact";
+import Comparision from "./Components/Comparision/Comparision";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/Review/:slug" element={<ReviewPostPage />} />
 
           <Route path="/Deals" element={<Deals />} />
+          <Route path="/Comparision" element={<Comparision />} />
         </Routes>
         <Footer />
       </Router>

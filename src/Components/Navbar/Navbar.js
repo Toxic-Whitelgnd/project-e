@@ -118,6 +118,11 @@ const NavBar = () => {
                        Deals
                       </Link>
                     </li>
+                    <li>
+                      <Link className="dropdown-item" to="/Comparision">
+                      Comparision
+                      </Link>
+                    </li>
                     <li className="mb-3">
                       <Link className="dropdown-item" to="/contactus">
                        Contact Us
